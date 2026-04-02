@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vape Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .age-verification { display: none; }
+        .nav { background-color: #333; padding: 1em; }
+        .nav a { color: white; padding: 14px 20px; text-decoration: none; }
+        .hero { background-color: #f3f3f3; padding: 50px; text-align: center; }
+        .products { display: flex; flex-wrap: wrap; justify-content: center; }
+        .product-card { border: 1px solid #ddd; border-radius: 5px; margin: 10px; padding: 20px; width: 200px; }
+        .product-card h3 { margin: 0; }
+        .add-to-cart { background-color: #28a745; color: white; border: none; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="age-verification" id="ageVerification">
+        <h2>Age Verification</h2>
+        <p>Please confirm that you are 21 years of age or older.</p>
+        <button onclick="verifyAge(true)">I am 21 or older</button>
+        <button onclick="verifyAge(false)">I am under 21</button>
+    </div>
+
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hero">
+        <h1>Welcome to Our Vape Store</h1>
+        <p>Your one-stop shop for all vape products!</p>
+    </div>
+
+    <div class="products" id="products">
+        <div class="product-card">
+            <h3>Product 1</h3>
+            <p>Price: $29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 2</h3>
+            <p>Price: $39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 3</h3>
+            <p>Price: $19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 4</h3>
+            <p>Price: $49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 5</h3>
+            <p>Price: $25.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <h3>Product 6</h3>
+            <p>Price: $34.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function verifyAge(isAdult) {
+            const ageVerificationDiv = document.getElementById('ageVerification');
+            if (isAdult) {
+                ageVerificationDiv.style.display = 'none';
+            } else {
+                alert('You must be 21 years or older to enter this website.');
+                window.location.href = "https://www.google.com";
+            }
+        }
+    </script>
+</body>
+</html>
